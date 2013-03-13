@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="Droid Mono"
+            android:text="Test:"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnCharm"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:background="#000000"
+            android:fontFamily="Droid Mono"
+            android:text="RECORD"
+            android:textColor="#ffffff"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pbCharm"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp" />
+
+    <SeekBar
+        android:id="@+id/sbTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    
+    <Button
+        android:id="@+id/btnNext2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_weight="0.00"
+        android:background="#000000"
+        android:fontFamily="Droid Mono"
+        android:text="Go to the next test"
+        android:textColor="#ffffff"
+        android:textStyle="italic" />
+    
+
+</LinearLayout>

@@ -16,6 +16,5 @@ gen/
 local.properties
 
 # Eclipse project files
-# .classpath
-# .project
-# Editting these out to see if we can import projects again
+.classpath
+.project
