@@ -13,6 +13,19 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class Menu extends Activity{
+	
+	// Different states corresponding to different button
+	// presses in the application
+	
+	public static final int STATE_NORMAEDA = 1;
+	public static final int STATE_STRESSEDEDA = 2;
+	public static final int STATE_HEAT = 3;
+	public static final int STATE_ACCEL = 4;
+	public static final int STATE_DEFAULT = 0;
+	
+	// All Things 
+	
+	public static int STATE_CURRENT = 0;
 
 	// Message types sent from the DeviceConnect Handler
     public static final int MESSAGE_STATE_CHANGE = 1;
@@ -22,8 +35,7 @@ public class Menu extends Activity{
     public static final int MESSAGE_TOAST = 5;
 	private static final int REQUEST_CONNECT_DEVICE = 1;
 	private final static String TAG = "Menu";	
-	private static final boolean D = true;	
-	private static TextView tvTitle;
+	private static final boolean D = true;
 	Button btnStart;
 	BluetoothAdapter btAdapter;
 	@Override
@@ -32,7 +44,6 @@ public class Menu extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
 		btnStart=(Button)findViewById(R.id.btnStart);
-		tvTitle=(TextView)findViewById(R.id.)
 		btAdapter=BluetoothAdapter.getDefaultAdapter();
 		btnStart.setOnClickListener(new Button.OnClickListener() {
 		   public void onClick(View arg0) {
@@ -136,8 +147,27 @@ public class Menu extends Activity{
                 break;
             
             case MESSAGE_READ:
+            	/*
+            	 * Add switch for STATE corresponding to data being collected
+            	 * Split the data by comma
+            	 */
+            	switch(Menu.STATE_CURRENT) {
+            	case Menu.STATE_NORMAEDA:
+            		break;
+            	case Menu.STATE_STRESSEDEDA:
+            		break;
+            	case Menu.STATE_HEAT:
+            		break;
+            	case Menu.STATE_ACCEL:
+            		break;
+            	case Menu.STATE_DEFAULT:
+            	default:
+            		// Do Nothing	
+            	}
+            	
+            	
             	byte[] readBuf = (byte[]) msg.obj;
-                String readMessage = new String(readBuf, 0, msg.arg1);                              
+                String readMessage = new String(readBuf, 0, msg.arg1);
                 break;
            
             
